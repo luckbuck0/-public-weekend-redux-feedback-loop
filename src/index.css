@@ -3,3 +3,78 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.App{
+  color: #6f6f83;
+}
+
+.feedback-header{
+  border: solid;
+  color: rgb(236, 236, 243);
+  background: rgb(34,193,195);
+  margin-left: -20px;
+  margin-right: -20px;
+  background: linear-gradient(0deg, rgb(199, 223, 224) 0%, rgba(133,45,253,1) 100%);
+
+}
+
+.feedbackFooter{
+  color: white;
+  
+  background: rgb(32,32,246);
+background: radial-gradient(circle, rgb(82, 82, 230) 0%, rgba(0,212,255,1) 0%, rgb(139, 135, 228) 9%);
+}
+
+.O5{
+  border: solid;
+  color: #fff;
+  height: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.O52{
+  margin-bottom: 50px;
+  color: #6f6f83;
+  height: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.O53{
+  
+  color: #6f6f83;
+  background-color: #c98dfd;
+  height: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+
