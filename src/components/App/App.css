@@ -21,3 +21,164 @@
 h4 {
   font-style: italic;
 }
+
+/* ---------------------MAIN PAGE------------------------- */
+
+.feedback-header{
+  border: solid;
+  color: rgb(236, 236, 243);
+  background: rgb(34,193,195);
+  margin-left: -20px;
+  margin-right: -20px;
+  background: linear-gradient(0deg, rgb(199, 223, 224) 0%, rgba(133,45,253,1) 100%);
+
+}
+
+.feedbackFooter{
+  color: white;
+  margin-top:120px;
+ 
+background: radial-gradient(circle, rgb(2, 7, 230) 0%, rgba(0,212,255,1) 10%, #c98dfd 9%);
+}
+
+.O5{
+  border: solid;
+  color: #fff;
+  height: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.textFront{
+  font-size: 70px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: #6f6f83;
+  height: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.startButton{
+  
+  color: #6f6f83;
+  background-color: #c98dfd;
+  height: 60px;
+  width: 150px;
+  margin-top: 150px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+
+/* ---------------------Page One------------------------- */
+
+.pageOneContainer{
+  border: solid;
+  color: blueviolet;
+  height: 300px;
+  margin-top: 100px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.rectangle{
+  width: 220px;
+  height: 20px;
+  color:#0fa;
+  background-color: #c98dfd;
+  margin-left: 25%;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.questionContainer{
+  border: solid;
+  color: white;
+  background-color: #c98dfd;
+  height: 200px;
+  margin-top: -20px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.pages{
+  margin-top: 2px;
+}
+
+.nextContainer{
+  margin-top: 30px;
+  width: 99.2%;
+  background-color: white;
+  height: 50px;
+  border: solid;
+  color: #c98dfd;
+}
+
+.nextButton{
+  margin-left: 78%;
+  border: none;
+  color: white;
+  background-color: #c98dfd;
+  margin-top: 20px;
+}
+
+.questions{
+  margin-top: 30px;
+}
+
+.inputQuestions{
+  margin-top: 30px;
+  width: 300px;
+  text-align: center;
+  border: none;
+}
+
+.textarea{
+  resize: none;
+}
+
+.thanks{
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.penguins{
+  height: 250px;
+}
+
+.newSurvey{
+  height: 30px;
+  justify-self: unset;
+  border: none;
+  color: white;
+  background-color: #c98dfd;
+  margin-top: 20px;
+}

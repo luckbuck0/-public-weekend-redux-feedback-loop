@@ -14,16 +14,107 @@ import logger from 'redux-logger';
 
 //---------------------REDUCERS---------------------------------
 
-const feeling = ((state = '', action) => {
-    return state
+const feeling = ((state = [], action) => {
+
+    if (action.type === 'SEND_FEELING'){
+
+        const feeling= action.payload
+
+        const copyOfState=[...state]
+
+        copyOfState.push(feeling)
+
+        return copyOfState
+    }
+    else if (action.type === 'RESET'){
+
+        const copyOfState=[...state]
+
+        copyOfState.pop()
+
+        return copyOfState
+    }
+    return state;
 })
+
+const understanding = ((state = [], action) => {
+    
+    if (action.type === 'SEND_UNDERSTANDING'){
+
+        const understanding= action.payload
+
+        const copyOfState=[...state]
+
+        copyOfState.push(understanding)
+
+        return copyOfState
+    }
+    else if (action.type === 'RESET'){
+
+        const copyOfState=[...state]
+
+        copyOfState.pop()
+
+        return copyOfState
+    }
+    return state;
+})
+
+const support = ((state = [], action) => {
+    
+    if (action.type === 'SEND_SUPPORT'){
+
+        const support= action.payload
+
+        const copyOfState=[...state]
+
+        copyOfState.push(support)
+
+        return copyOfState
+    }
+    else if (action.type === 'RESET'){
+
+        const copyOfState=[...state]
+
+        copyOfState.pop()
+
+        return copyOfState
+    }
+    return state;
+})
+
+const  comments= ((state = [], action) => {
+    
+    if (action.type === 'SEND_COMMENTS'){
+
+        const comments= action.payload
+
+        const copyOfState=[...state]
+
+        copyOfState.push(comments)
+
+        return copyOfState
+    } else if (action.type === 'RESET'){
+
+        const copyOfState=[...state]
+
+        copyOfState.pop()
+
+        return copyOfState
+    }
+    return state;
+})
+
 
 ///---------------------STORE---------------------------------
 
 const store = createStore(
 
     combineReducers({
-        feeling
+        feeling,
+        understanding,
+        support,
+        comments
     }),
     applyMiddleware(
         logger

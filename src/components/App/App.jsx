@@ -1,8 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import PageOne from '../PageOne/PageOne';
 
+//---------------------Pages---------------------------------
+import PageOne from '../PageOne/PageOne';
+import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
+
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 //---------------------Router---------------------------------
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom/cjs/react-router-dom.min';
@@ -11,19 +19,49 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function App() {
 
+  let history = useHistory()
+
+  console.log('hello');
+
   return (
     <div className='App'>
-      <header className='feedback-header'>
+       <header className='feedback-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4 className='O5'>05X STUDIOS</h4>
       </header>
-      <h3 className='O52'> TO BEGIN <br /> PRESS START</h3>
-      <button className='O53'>START</button>
+   
       <Router>
+
+           <Route exact path="/"> 
+      
+      <h3 className='textFront'> TO BEGIN <br /> PRESS START</h3>
+      <button className='startButton'><Link to="/pageOne">START</Link></button>
+      </Route>
 
         <Route exact path="/pageOne">
           <PageOne />
         </Route>
+
+        <Route exact path="/pageTwo">
+          <Understanding />
+        </Route>
+
+        <Route exact path="/pageThree">
+          <Support />
+        </Route>
+
+        <Route exact path="/pageFour">
+          <Comments />
+        </Route>
+
+        <Route exact path="/pageFive">
+          <Review />
+        </Route>
+
+        <Route exact path="/pageSix">
+          <ThankYou />
+        </Route>
+
 
       </Router>
 
