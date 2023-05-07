@@ -1,7 +1,7 @@
 
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { useState, } from "react";
 import axios from "axios";
 
@@ -11,6 +11,7 @@ function Review() {
     const [scaleInput, setScaleInput] = useState('');
 
 //---------------------REACT FUNCTIONS---------------------------------
+    const dispatch = useDispatch()
     const history = useHistory()
 
 //---------------------USE SELECTORS---------------------------------
@@ -19,6 +20,30 @@ function Review() {
     const comments = useSelector((store) => store.comments)
     const support = useSelector((store) => store.support)
 
+    const sendBack = ()=> {
+
+        dispatch({
+            type:'RESET_COMMENTS',
+            payload:''
+        })
+    }
+    
+        const onToNext = () => {
+           
+                return (
+                    <div>
+                         <p onClick={sendFeeling} >
+                        <button onClick={() => { history.push('/pageSix') }} className="nextButton">Submit ➡</button>
+                    </p>
+                    
+                    <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageFour') }} className="pastButton" >⬅ PAST</button></p>
+                    </div>
+                   
+                )
+            
+        }
+        
+    
 
 //---------------------POST FUNCTIONS---------------------------------
     const sendFeeling = () => {
@@ -58,9 +83,7 @@ function Review() {
                     <p>understanding:{understanding}</p>
                     <p>Support:{support}</p>
                     <p>Comments:{comments}</p>
-                    <p onClick={sendFeeling} >
-                        <button onClick={() => { history.push('/pageSix') }} className="nextButton">Submit ➡</button>
-                    </p>
+                    {onToNext()}
 
                 </div>
             </div>

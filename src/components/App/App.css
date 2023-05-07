@@ -182,3 +182,14 @@ background: radial-gradient(circle, rgb(2, 7, 230) 0%, rgba(0,212,255,1) 10%, #c
   background-color: #c98dfd;
   margin-top: 20px;
 }
+
+.pastButton{
+
+  border: none;
+  color: white;
+  background-color: #c98dfd;
+  margin-top: -120px;
+  width: 80px;
+ 
+  
+}

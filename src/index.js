@@ -26,7 +26,7 @@ const feeling = ((state = [], action) => {
 
         return copyOfState
     }
-    else if (action.type === 'RESET'){
+    else if (action.type === 'RESET_FEELING'){
 
         const copyOfState=[...state]
 
@@ -49,7 +49,7 @@ const understanding = ((state = [], action) => {
 
         return copyOfState
     }
-    else if (action.type === 'RESET'){
+    else if (action.type === 'RESET_UNDERSTANDING'){
 
         const copyOfState=[...state]
 
@@ -72,7 +72,7 @@ const support = ((state = [], action) => {
 
         return copyOfState
     }
-    else if (action.type === 'RESET'){
+    else if (action.type === 'RESET_SUPPORT'){
 
         const copyOfState=[...state]
 
@@ -94,7 +94,7 @@ const  comments= ((state = [], action) => {
         copyOfState.push(comments)
 
         return copyOfState
-    } else if (action.type === 'RESET'){
+    } else if (action.type === 'RESET_COMMENTS'){
 
         const copyOfState=[...state]
 
@@ -104,6 +104,8 @@ const  comments= ((state = [], action) => {
     }
     return state;
 })
+
+
 
 
 ///---------------------STORE---------------------------------

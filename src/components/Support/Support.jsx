@@ -15,15 +15,44 @@ function Support (){
     
 //---------------------CONDITIONAL FUNCTIONS---------------------------------
 
-    const onToNext = () =>{
-        if (scaleInput!=''){
-            return (
-                    <p onClick={sendScale} className="nextContainer"> 
-                        <button onClick={()=>{history.push('/pageFour')}}  className="nextButton">NEXT ➡</button>
-                    </p>
-            )
+    // const onToNext = () =>{
+    //     if (scaleInput!=''){
+    //         return (
+    //                 <p onClick={sendScale} className="nextContainer"> 
+    //                     <button onClick={()=>{history.push('/pageFour')}}  className="nextButton">NEXT ➡</button>
+    //                 </p>
+    //         )
+    //     }
+    // } 
+
+    const sendBack = ()=> {
+
+        dispatch({
+            type:'RESET_UNDERSTANDING',
+            payload:''
+        })
+    }
+    
+        const onToNext = () => {
+            if (scaleInput != '') {
+                return (
+                    <div>
+                          <p onClick={sendScale} className="nextContainer"> 
+    //                     <button onClick={()=>{history.push('/pageFour')}}  className="nextButton">NEXT ➡</button>
+    //                 </p>
+                    
+                    <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageTwo') }} className="pastButton" >⬅ PAST</button></p>
+                    </div>
+                   
+                )
+            }
+            else {
+                return (
+                    <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageTwo') }} className="pastButton" >⬅ PAST</button></p>
+                )
+            }
         }
-    } 
+
 
     const sendScale= ()=>{
         if (scaleInput!=''){

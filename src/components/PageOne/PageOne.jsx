@@ -8,19 +8,38 @@ import { useState, } from "react";
 function PageOne() {
 
     const [feelingInput, setFeelingInput] = useState('');
-    
+
 //---------------------REACT FUNCTIONS---------------------------------
     const dispatch = useDispatch()
 
     const history = useHistory()
 
 //---------------------CONDITIONAL FUNCTIONS---------------------------------
+
+const sendBack = ()=> {
+
+    dispatch({
+        type:'RESET_FEELING',
+        payload:''
+    })
+}
+
     const onToNext = () => {
         if (feelingInput != '') {
             return (
-                <p onClick={sendFeeling} className="nextContainer">
+                <div>
+                     <p onClick={sendFeeling} className="nextContainer">
                     <button onClick={() => { history.push('/pageTwo') }} className="nextButton">NEXT ➡</button>
+                   
                 </p>
+                <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/') }} className="pastButton" >⬅ PAST</button></p>
+                </div>
+               
+            )
+        }
+        else {
+            return (
+                <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/') }} className="pastButton" >⬅ PAST</button></p>
             )
         }
     }
@@ -62,6 +81,7 @@ function PageOne() {
                         onChange={(event) => { setFeelingInput(event.target.value) }}
                     /> <br />
                     {onToNext()}
+                    
                 </div>
             </div>
 

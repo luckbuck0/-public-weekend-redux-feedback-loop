@@ -19,6 +19,34 @@ function Comments() {
 
 //---------------------CONDITIONAL FUNCTIONS---------------------------------
 
+const sendBack = ()=> {
+
+    dispatch({
+        type:'RESET_SUPPORT',
+        payload:''
+    })
+}
+
+    const onToNext = () => {
+        if (scaleInput != '') {
+            return (
+                <div>
+                     <p onClick={sendFeeling} >
+                        <button onClick={() => { history.push('/pageFive') }} className="nextButton">NEXT ➡</button>
+                    </p>
+                
+                <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageThree') }} className="pastButton" >⬅ PAST</button></p>
+                </div>
+               
+            )
+        }
+        else {
+            return (
+                <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageThree') }} className="pastButton" >⬅ PAST</button></p>
+            )
+        }
+    }
+
     const sendFeeling = () => {
 
         dispatch({
@@ -48,9 +76,7 @@ function Comments() {
                         onChange={(event) => { setScaleInput(event.target.value) }}
                     >
                     </textarea>
-                    <p onClick={sendFeeling} >
-                        <button onClick={() => { history.push('/pageFive') }} className="nextButton">NEXT ➡</button>
-                    </p>
+                   {onToNext()}
 
                 </div>
             </div>

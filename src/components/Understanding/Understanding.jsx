@@ -15,15 +15,43 @@ function Understanding() {
     const history = useHistory()
 
 //---------------------CONDITIONAL FUNCTIONS---------------------------------
-    const onToNext = () => {
-        if (scaleInput != '') {
-            return (
-                <p onClick={sendScale} className="nextContainer">
-                    <button onClick={() => { history.push('/pageThree') }} className="nextButton">NEXT ➡</button>
-                </p>
-            )
-        }
+    // const onToNext = () => {
+    //     if (scaleInput != '') {
+    //         return (
+    //             <p onClick={sendScale} className="nextContainer">
+    //                 <button onClick={() => { history.push('/pageThree') }} className="nextButton">NEXT ➡</button>
+    //             </p>
+    //         )
+    //     }
+    // }
+
+    const sendBack = ()=> {
+
+        dispatch({
+            type:'RESET_FEELING',
+            payload:''
+        })
     }
+    
+        const onToNext = () => {
+            if (scaleInput != '') {
+                return (
+                    <div>
+                         <p onClick={sendScale} >
+                            <button onClick={() => { history.push('/pageThree') }} className="nextButton">NEXT ➡</button>
+                        </p>
+                    
+                    <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageOne') }} className="pastButton" >⬅ PAST</button></p>
+                    </div>
+                   
+                )
+            }
+            else {
+                return (
+                    <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageOne') }} className="pastButton" >⬅ PAST</button></p>
+                )
+            }
+        }
 
     const sendScale = () => {
         if (scaleInput != '') {
