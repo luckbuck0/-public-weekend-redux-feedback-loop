@@ -25,18 +25,18 @@ function App() {
 
   return (
     <div className='App'>
-       <header className='feedback-header'>
+      <header className='feedback-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4 className='O5'>05X STUDIOS</h4>
       </header>
-   
+
       <Router>
 
-           <Route exact path="/"> 
-      
-      <h3 className='textFront'> TO BEGIN <br /> PRESS START</h3>
-      <button className='startButton'><Link to="/pageOne">START</Link></button>
-      </Route>
+        <Route exact path="/">
+
+          <h3 className='textFront'> TO BEGIN <br /> PRESS START</h3>
+          <button className='startButton'><Link to="/pageOne">START</Link></button>
+        </Route>
 
         <Route exact path="/pageOne">
           <PageOne />

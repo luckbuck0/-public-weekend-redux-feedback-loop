@@ -7,11 +7,14 @@ import { useState, } from "react";
 function Support (){
 
     const [scaleInput,setScale]=useState('');
-
+    
+//---------------------REACT FUNCTIONS---------------------------------
     const dispatch = useDispatch()
 
     const history =useHistory()
     
+//---------------------CONDITIONAL FUNCTIONS---------------------------------
+
     const onToNext = () =>{
         if (scaleInput!=''){
             return (
@@ -31,6 +34,7 @@ function Support (){
         }
     }
 
+//---------------------USE SELECTORS---------------------------------
     const support =useSelector((store)=> store.support)
     console.log(support);
     console.log(scaleInput);
