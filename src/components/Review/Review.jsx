@@ -36,7 +36,9 @@ function Review() {
                         <button onClick={() => { history.push('/pageSix') }} className="nextButton">Submit ➡</button>
                     </p>
                     
-                    <p className="pastButton" onClick={sendBack}> <button onClick={() => { history.push('/pageFour') }} className="pastButton" >⬅ PAST</button></p>
+                    <p className="pastButton" onClick={sendBack}> 
+                    <button onClick={() => { history.push('/pageFour') }}  className="pastButton" >⬅ PAST</button>
+                    </p>
                     </div>
                    
                 )

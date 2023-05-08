@@ -4,6 +4,17 @@ import './index.css';
 import App from './components/App/App';
 
 
+
+//---------------------MATERIAL UI---------------------------------
+import { ThemeProvider, createTheme } from '@mui/material';
+
+const theme = createTheme({
+    pallete:{
+        primary:{
+            main:"EDE9F2"
+        }
+    }
+})
 //---------------------REDUX---------------------------------
 
 import { applyMiddleware, combineReducers, createStore } from 'redux';
@@ -26,7 +37,7 @@ const feeling = ((state = [], action) => {
 
         return copyOfState
     }
-    else if (action.type === 'RESET_FEELING'){
+    else if (action.type === 'RESET_FEELING' || action.type=== 'RESET'){
 
         const copyOfState=[...state]
 
@@ -49,7 +60,7 @@ const understanding = ((state = [], action) => {
 
         return copyOfState
     }
-    else if (action.type === 'RESET_UNDERSTANDING'){
+    else if (action.type === 'RESET_UNDERSTANDING' || action.type=== 'RESET'){
 
         const copyOfState=[...state]
 
@@ -72,7 +83,7 @@ const support = ((state = [], action) => {
 
         return copyOfState
     }
-    else if (action.type === 'RESET_SUPPORT'){
+    else if (action.type === 'RESET_SUPPORT' || action.type=== 'RESET'){
 
         const copyOfState=[...state]
 
@@ -85,7 +96,7 @@ const support = ((state = [], action) => {
 
 const  comments= ((state = [], action) => {
     
-    if (action.type === 'SEND_COMMENTS'){
+    if (action.type === 'SEND_COMMENTS' ){
 
         const comments= action.payload
 
@@ -94,7 +105,7 @@ const  comments= ((state = [], action) => {
         copyOfState.push(comments)
 
         return copyOfState
-    } else if (action.type === 'RESET_COMMENTS'){
+    } else if (action.type === 'RESET_COMMENTS' || action.type=== 'RESET'){
 
         const copyOfState=[...state]
 
@@ -104,6 +115,8 @@ const  comments= ((state = [], action) => {
     }
     return state;
 })
+
+
 
 
 
@@ -125,10 +138,11 @@ const store = createStore(
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <ThemeProvider theme={theme}>
     <Provider store={store}>
         <React.StrictMode>
             <App />
         </React.StrictMode>
     </Provider>
-
+    </ThemeProvider>
 );

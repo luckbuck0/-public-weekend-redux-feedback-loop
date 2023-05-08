@@ -1,13 +1,22 @@
 
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-
+import { Button } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, } from "react";
 
+import { ThemeProvider,createTheme } from "@emotion/react";
 
 function PageOne() {
 
     const [feelingInput, setFeelingInput] = useState('');
+
+// const theme = createTheme({
+//     pallete:{
+//         primary:{
+//             main:"#ccc"
+//         }
+//     }
+// })
 
 //---------------------REACT FUNCTIONS---------------------------------
     const dispatch = useDispatch()

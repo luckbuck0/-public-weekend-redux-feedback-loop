@@ -17,7 +17,14 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom/cjs/react-ro
 import { useSelector, useDispatch } from 'react-redux';
 
 
+//---------------------Material UI---------------------------------
+import { Button } from '@mui/material';
+
+
+
 function App() {
+
+
 
   let history = useHistory()
 
@@ -35,7 +42,7 @@ function App() {
         <Route exact path="/">
 
           <h3 className='textFront'> TO BEGIN <br /> PRESS START</h3>
-          <button className='startButton'><Link to="/pageOne">START</Link></button>
+          <Button variant="contained" sx={{mt:20}} color="primary" className='startButton'><Link to="/pageOne">START</Link></Button>
         </Route>
 
         <Route exact path="/pageOne">
